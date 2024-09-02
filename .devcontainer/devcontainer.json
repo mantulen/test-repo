@@ -1,0 +1,21 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+    "postCreateCommand": "pip install pre-commit && pre-commit install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "github.copilot",
+                "github.copilot-chat",
+                "github.vscode-github-actions",
+                "github.vscode-pull-request-github",
+                "me-dutour-mathieu.vscode-github-actions",
+                "redhat.vscode-yaml"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "installTools": false
+        }
+    }
+}

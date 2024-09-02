@@ -1,0 +1,33 @@
+name: pre-commit-runner-test
+
+on:
+    pull_request:
+        branches:
+            - main
+    push:
+        branches:
+            - main
+
+permissions:
+    contents: read
+    pull-requests: write
+
+jobs:
+    test-action:
+        name: GitHub Actions Test
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              id: checkout
+              uses: actions/checkout@v4
+
+            - name: Test Local Action
+              id: test-action
+              uses: mantulen/pre-commit-action@main
+              with:
+                  debug: true
+
+            - name: Print Output
+              id: output
+              run: echo "${{ steps.test-action.outputs.result }}"
