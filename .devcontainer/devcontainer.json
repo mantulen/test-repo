@@ -1,6 +1,6 @@
 {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-    "postCreateCommand": "pip install pre-commit && pre-commit install",
+    "postCreateCommand": "pip install pre-commit",
     "customizations": {
         "vscode": {
             "extensions": [
