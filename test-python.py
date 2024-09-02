@@ -1,1 +1,1 @@
-import fake_module
+print("Hello, Python!")
